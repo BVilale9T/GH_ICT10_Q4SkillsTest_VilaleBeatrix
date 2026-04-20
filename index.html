@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Absences Tracker</title>
+
+    <!-- PyScript CSS & JS -->
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+</head>
+<body>
+
+    <h2>Absences Tracker</h2>
+
+    <!-- Month चयन -->
+    <label for="day">Select Month:</label>
+    <select id="month">
+        <option value="0">Jan</option>
+        <option value="1">Feb</option>
+        <option value="2">Mar</option>
+        <option value="3">Apr</option>
+        <option value="4">May</option>
+        <option value="5">Jun</option>
+        <option value="6">Jul</option>
+        <option value="7">Aug</option>
+        <option value="8">Sep</option>
+        <option value="9">Oct</option>
+        <option value="10">Nov</option>
+        <option value="11">Dec</option>
+    </select>
+
+    <br><br>
+
+    <!-- Input -->
+    <label for="absence_num">Number of Absences:</label>
+    <input type="number" id="absence_num" min="0" value="1">
+
+    <br><br>
+
+    <!-- Button -->
+    <button py-click="add_absence">Add Absence</button>
+
+    <p id="error" style="color:red;"></p>
+    <py-script src="main.py"></py-script>
+    <py-config>
+        packages=['numpy', 'matplotlib']
+    </py-config>
+
+
+</body>
+</html>
